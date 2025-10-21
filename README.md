@@ -35,7 +35,8 @@ Trabajo individual basado en el repo **Exploit-the-Binary** y el temario del mó
 │       └── screenshots/
 ├── lab/                    # notas de entorno, mitigaciones, versiones
 └── scripts/                # utilidades generales (pattern.py, etc.)
-4) Metodología (pipeline)
+
+## 4) Metodología (pipeline)
 Detección: fuzzing/inputs límite, revisión estática ligera.
 
 Contexto: SO/arquitectura, mitigaciones activas, superficie de entrada.

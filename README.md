@@ -35,7 +35,7 @@ Trabajo individual basado en el repo **Exploit-the-Binary** y el temario del mó
 │       └── screenshots/
 ├── lab/                    # notas de entorno, mitigaciones, versiones
 └── scripts/                # utilidades generales (pattern.py, etc.)
-
+```
 ## 4) Metodología (pipeline)
 Detección: fuzzing/inputs límite, revisión estática ligera.
 
@@ -53,7 +53,7 @@ Validación: fiabilidad, variantes del entorno (ASLR aleatorio, reinicios).
 
 Documentación: PoC clara, impacto, mitigación y riesgos residuales.
 
-5) Casos prácticos
+## 5) Casos prácticos
 Caso 01 — Stack-based Buffer Overflow (x86, Windows)
 Objetivo: controlar EIP y ejecutar un payload de prueba (p.ej., calc) o ROP con DEP.
 Pasos sugeridos:
@@ -109,7 +109,7 @@ cases/02_format_string/screenshots/*
 
 cases/02_format_string/README.md con cómo reproducir.
 
-6) Aproximación a 0-days (fuzzing/diffing/reversing)
+## 6) Aproximación a 0-days (fuzzing/diffing/reversing)
 Fuzzing: elegir target y protocolo/CLI; diccionarios semánticos; medir cobertura.
 Minimización de crashes: cmin/tmin o reducción manual de inputs.
 Triage: agrupar por firma de excepción y backtrace.
@@ -119,7 +119,7 @@ Reporte: PoC mínima, impacto, mitigaciones y repro steps claros.
 
 Incluye logs/capturas de fuzzing y un mini-informe en lab/.
 
-7) Bypass de mitigaciones (hoja de ruta)
+## 7) Bypass de mitigaciones (hoja de ruta)
 DEP/NX → ROP/JOP, VirtualProtect/VirtualAlloc vía gadgets.
 
 ASLR → info leak, módulos no aleatorizados, cálculos relativos.
@@ -128,7 +128,7 @@ Stack Canaries → evitar sobrescritura directa / leak de canario (solo en lab).
 
 CFG/SafeSEH → gadgets válidos, llamadas permitidas, diferencias x86/x64.
 
-8) Evidencias y criterios de corrección
+## 8) Evidencias y criterios de corrección
 Reproducibilidad: pasos “cómo reproducir” por caso + scripts listos.
 
 Pruebas: capturas de crash, control de registros, ejecución del payload.
@@ -137,7 +137,7 @@ Calidad: PoC clara, comentarios en código, manejo de errores.
 
 Mitigación: propuesta técnica y justificación.
 
-9) Cómo ejecutar (ejemplos)
+## 9) Cómo ejecutar (ejemplos)
 bash
 Copiar código
 # Generar patrón cíclico de 600 bytes
@@ -145,7 +145,8 @@ python scripts/pattern.py 600
 
 # Ejecutar exploit de un caso
 python cases/01_stack_overflow_x86/scripts/exploit.py
-10) Bibliografía y recursos
+
+## 10) Bibliografía y recursos
 Write-ups y documentación de herramientas utilizadas (añadir enlaces).
 
 Referencias del temario del módulo.
